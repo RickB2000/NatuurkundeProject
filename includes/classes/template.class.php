@@ -33,7 +33,7 @@ class Template {
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li ' . (($currentpage == 'home') ? 'class="active"' : '') . '><a href="index.php">Home</a></li>
-		<li ' . (($currentpage == 'studentpages') ? 'class="active"' : '') . '><a href="index.php">Leerlingpagina\'s</a></li>
+		<li ' . (($currentpage == 'studentpages') ? 'class="active"' : '') . '><a href="studentpages.php">Leerlingpagina\'s</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
