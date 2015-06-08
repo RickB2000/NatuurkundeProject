@@ -33,6 +33,7 @@ class Template {
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li ' . (($currentpage == 'home') ? 'class="active"' : '') . '><a href="index.php">Home</a></li>
+		<li ' . (($currentpage == 'studentpages') ? 'class="active"' : '') . '><a href="index.php">Leerlingpagina\'s</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
@@ -42,7 +43,9 @@ class Template {
 	public static function getFooter() {
 		//Return the footer in HTML
 		$line = '<div class="container"><hr /><small>Copyright &copy; 2015 by Rick Bakker</small></div>';
+		$line .= '<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>';
 		$line .= '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>';
+		$line .= '<script src="/script.js"></script>';
 		$line .= '</body>';
 		$line .= '</html>';
 		return $line;
