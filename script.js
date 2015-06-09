@@ -45,11 +45,12 @@ $(document).ready(function() {
 				$("#passwd-form-group").removeClass('has-error');
 				if(data == "OK") {
 					$("#passwd-form-group").addClass('has-success');
-					$("#passwd_indicator").html("Wachtwoord correct!");
+					$("#passwd_indicator").html("Wachtwoord geldig!");
 					$("#submit").prop('disabled', false);
 				} else {
-					$("#passwd-form-group").addClass('has-error');
-					$("#passwd_indicator").html("Wachtwoord incorrect!");
+					//$("#passwd-form-group").addClass('has-error');
+					//$("#passwd_indicator").html("Wachtwoord incorrect!");
+					$("#passwd_indicator").html("&nbsp;");
 					$("#submit").prop('disabled', true);
 				}
 			});

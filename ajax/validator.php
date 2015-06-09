@@ -13,7 +13,7 @@ require_once '../includes/bootstrap.inc.php';
 if(isset($_GET['type']) && $_GET['type'] == 'password_check') {
 	if(!isset($_GET['id']) || !is_numeric($_GET['id'])): echo 'INVALID'; exit(); endif;
 	if(!isset($_GET['password'])): echo 'INVALID'; exit(); endif;
-	try {
+	/*try {
 		$query = $db->prepare("SELECT password FROM student WHERE number = :id");
 		$query->bindParam(':id', $_GET['id']);
 		$query->execute();
@@ -32,6 +32,11 @@ if(isset($_GET['type']) && $_GET['type'] == 'password_check') {
 	} catch(PDOException $e) {
 		echo 'Connection failed: ' . $e->getMessage();
 		exit();
+	}*/
+	if(trim($_GET['password']) == '') {
+		echo 'INVALID';
+	}else{
+		echo 'OK';
 	}
 	exit();
 }elseif(isset($_GET['type']) && $_GET['type'] == 'number_check') {

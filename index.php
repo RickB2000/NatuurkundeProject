@@ -1,6 +1,8 @@
 <?php
 /**
- * Index page. Contains search form.
+ * Index page.
+ * This page shows up the search form. 
+ * Form is handled in student.php itself.
  *
  * @package    NatuurkundeProject
  * @author     Rick Bakker <rickb@kker.net>

@@ -64,7 +64,7 @@ class Template {
 	 */
 	public static function getFooter() {
 		//Return the footer in HTML
-		$line = '<div class="container"><hr /><small>Copyright &copy; 2015 by Rick Bakker</small></div>';
+		$line = '<div class="container"><hr /><small class="pull-left">Copyright &copy; 2015 by Rick Bakker</small></div>';
 		$line .= '<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>';
 		$line .= '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>';
 		$line .= '<script src="/script.js"></script>';
