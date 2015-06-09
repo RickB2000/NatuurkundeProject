@@ -39,7 +39,7 @@ echo Template::getNavBar('studentpages');
 		Pagina van <?php echo $studentInfo['name']; ?>
 	</h2>
 	<p>
-		
+
 	</p>
 
 </div>

@@ -1,6 +1,11 @@
 <?php
 
 class Template {
+	/**
+	 * Returns the header
+	 *
+	 * @param string $page The current page's name
+	 */
 	public static function getHeader($page = 'Home') {
 		//Return the header in HTML
 		$line = '<!DOCTYPE html>';
@@ -15,6 +20,11 @@ class Template {
 		return $line;
 	}
 	
+	/**
+	 * Returns the navigation bar
+	 *
+	 * @param string $currentpage The current page's identifier
+	 */
 	public static function getNavBar($currentpage = 'home') {
 		return '<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
@@ -40,6 +50,9 @@ class Template {
 </nav>';
 	}
 	
+	/**
+	 * Returns the footer
+	 */
 	public static function getFooter() {
 		//Return the footer in HTML
 		$line = '<div class="container"><hr /><small>Copyright &copy; 2015 by Rick Bakker</small></div>';
