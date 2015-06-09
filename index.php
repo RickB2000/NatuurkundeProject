@@ -1,4 +1,12 @@
 <?php
+/**
+ * Index page. Contains search form.
+ *
+ * @package    NatuurkundeProject
+ * @author     Rick Bakker <rickb@kker.net>
+ * @copyright  2015 Rick Bakker
+ */
+
 require_once 'includes/bootstrap.inc.php';
 
 echo Template::getHeader('Home'); 
@@ -19,16 +27,23 @@ echo Template::getNavBar('home');
 		De onderstaande knop zal automatisch activeren wanneer de invoer correct is.
 	</p>
 	<form class="form-horizontal" method="post" action="student.php">
-	<!-- Text input-->
+
 	<div class="form-group" id="llnr-form-group">
 	  <label class="col-md-4 control-label" for="llnr">Leerlingnummer</label>  
 	  <div class="col-md-4">
-		  <input id="llnr" name="llnr" placeholder="Leerlingnummer" class="form-control input-md" required="" type="text">
+		  <input id="llnr" name="llnr" placeholder="Leerlingnummer" class="form-control input-md" required="" <?php if(isset($_GET['username']) && is_numeric($_GET['username']) && isset($_GET['login'])): echo 'value="' . htmlentities($_GET['username']) . '"'; endif; ?> type="text">
 		  <span class="help-block" id="student_name">&nbsp;</span>  
 	  </div>
 	</div>
 
-	<!-- Button -->
+	<div class="form-group" id="passwd-form-group" style="display: none;">
+	  <label class="col-md-4 control-label" for="password">Wachtwoord</label>  
+	  <div class="col-md-4">
+		  <input id="password" name="password" placeholder="Wachtwoord" class="form-control input-md" type="password">
+		  <span class="help-block" id="passwd_indicator">&nbsp;</span>  
+	  </div>
+	</div>
+	
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="submit"></label>
 	  <div class="col-md-4">
@@ -38,4 +53,5 @@ echo Template::getNavBar('home');
 
 	</form>
 	</div>
+
 <?php echo Template::getFooter(); ?>

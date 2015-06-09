@@ -1,4 +1,13 @@
 <?php
+/**
+ * Template class
+ * This class contains functions to return parts of the template.
+ *
+ * @package    NatuurkundeProject
+ * @author     Rick Bakker <rickb@kker.net>
+ * @copyright  2015 Rick Bakker
+ */
+
 
 class Template {
 	/**
